@@ -1,5 +1,5 @@
 /**
- * Testing class for Product object
+ * Testing class for Animal object
  *
  * @author Stephen Thung, references previous code from Dr.Fagg, Taner Davis
  * @version 2018-08-25
@@ -37,6 +37,9 @@ public class AnimalTest
     	Assert.assertEquals(17.0, platypus.getWeight(), 0.01);
     }
     
+    /**
+     * Test the Animal toString()
+     */
     public void toStringTest() throws AssertException
     {
     	//Create an object to use the toString() on
