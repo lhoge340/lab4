@@ -8,7 +8,7 @@
 public class EquipmentTest {
 	
 	/**
-	 * Test the Equipment constructor and the getters?
+	 * Test the Equipment constructor and the getters
 	 */
 	public void constructorTest() throws AssertException
 	{
@@ -25,6 +25,23 @@ public class EquipmentTest {
 		Assert.assertEquals(15.0, item.getTotalPrice());
 		Assert.assertEquals("keep sharpened", item.getDescription());
 		
+	}
+	
+	/**
+	 * Test the Equipment toString()
+	 */
+	public void toStringTest() throws AssertException
+	{
+		//Create an object to use the toString() on
+		String strg = "knife/1,2.0,15.0,keep sharpened";
+		Equipment item = new Equipment(strg);
+		
+		//Write the expected and actual strings
+		String expected = "Name: knife, Number: 1, Weight: 2.00 lbs, Price: $15.00 - keep sharpened";
+		String actual = item.toString();
+		
+		//Compare
+		Assert.assertEquals(expected, actual);
 	}
 	
 
