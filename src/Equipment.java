@@ -5,7 +5,7 @@
  * which the count variable would be equal to 5.
  *
  * @author Stephen
- * @version 2019-01-27
+ * @version 2019-02-09
  */
 public class Equipment
 {
@@ -123,7 +123,15 @@ public class Equipment
         Equipment otherEq = (Equipment)other;
 
         // Check that all fields match (name, count, totalWeight, totalPrice, and description):
-      
-        // TODO: finish method
+        if (otherEq.getName() == this.getName() && otherEq.getCount() == this.getCount() && otherEq.getTotalWeight()
+        		== this.getTotalWeight() && otherEq.getTotalPrice() == this.getTotalPrice() && 
+        		otherEq.getDescription() == this.getDescription())
+        {
+        	return true;
+        }
+        else
+        {
+        	return false;
+        }
     }
 }
