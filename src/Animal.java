@@ -2,7 +2,7 @@
  * Class to represent an animal in a zoo. Animals have a color, name, weight, and height.
  *
  * @author Stephen Thung
- * @version 2019-01-23
+ * @version 2019-02-09
  */
 public class Animal
 {

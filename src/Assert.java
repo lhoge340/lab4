@@ -6,7 +6,7 @@
  * ints, doubles, and objects (assumes the equals method is overriden).
  *
  * @author Stephen
- * @version 2019-02-06
+ * @version 2019-02-07
  */
 public class Assert
 {
@@ -94,6 +94,136 @@ public class Assert
 					+ "\n*******************************\n"
 					+ "Equality Error!\nExpected: %s\nActually: %s\n",
 					expected.toString(), actual.toString());
+			throw new AssertException(errorMessage);
+		}
+	}
+
+	/**
+	 * Asserts that two values are equal. Throws an exception if they are not equal.
+	 * If an AssertException is thrown the test has failed. The test or code should
+	 * be amended to that no AssertExceptions are thrown.
+	 *
+	 * Several overrides are given to compare different data types.
+	 *
+	 * boolean comparisons are simple.
+	 *
+	 * @param expected The excepted value.
+	 * @param actual The actual value.
+	 * @throws AssertException Thrown if the expected value does not match the actual
+	 * value.
+	 */
+	public static void assertEquals(boolean expected, boolean actual) throws AssertException
+	{
+		if (expected != actual)
+		{
+			String errorMessage = String.format("\n*******************************"
+					+ "\n*** Test Results: *************"
+					+ "\n*******************************\n"
+					+ "Equality Error!\nExpected: %s\nActually: %s\n", expected, actual);
+			throw new AssertException(errorMessage);
+		}
+	}
+
+	/**
+	 * Asserts that a value is true.
+	 *
+	 * @param expected The actual value.
+	 * @throws AssertException Thrown if the actual value does not equal true;
+	 */
+	public static void assertTrue(boolean actual) throws AssertException
+	{
+		assertEquals(true, actual);
+	}
+
+	/**
+	 * Asserts that a value is false.
+	 *
+	 * @param expected The actual value.
+	 * @throws AssertException Thrown if the actual value does not equal true;
+	 */
+	public static void assertFalse(boolean actual) throws AssertException
+	{
+		assertEquals(false, actual);
+	}
+
+	//==================================================================================================================
+	// Not equals:
+	//==================================================================================================================
+
+	/**
+	 * Asserts that two values are not equal. Throws an exception if they are equal.
+	 * If an AssertException is thrown the test has failed. The test or code should
+	 * be amended to that no AssertExceptions are thrown.
+	 *
+	 * Several overrides are given to compare different data types.
+	 *
+	 * int comparisons are simple.
+	 *
+	 * @param first The first value.
+	 * @param second The second value.
+	 * @throws AssertException Thrown if the first value matches the second value.
+	 */
+	public static void assertNotEquals(int first, int second) throws AssertException
+	{
+		if (first == second)
+		{
+			String errorMessage = String.format("\n*******************************"
+					+ "\n*** Test Results: *************"
+					+ "\n*******************************\n"
+					+ "Should not be equal!\nFirst value: %d\nSecond Value: %d\n", first, second);
+			throw new AssertException(errorMessage);
+		}
+	}
+
+	/**
+	 * Asserts that two values are not equal. Throws an exception if they are equal.
+	 * If an AssertException is thrown the test has failed. The test or code should
+	 * be amended to that no AssertExceptions are thrown.
+	 *
+	 * Several overrides are given to compare different data types.
+	 *
+	 * Compares doubles within range.
+	 *
+	 * @param first The first value.
+	 * @param second The second value.
+	 * @param delta The float deviation.
+	 * @throws AssertException Thrown if the first value matches the second value.
+	 */
+	public static void assertNotEquals(double first, double second, double delta) throws AssertException
+	{
+		if (Math.abs(first - second) < delta)
+		{
+			String errorMessage = String.format("\n*******************************"
+					+ "\n*** Test Results: *************"
+					+ "\n*******************************\n"
+					+ "Should not be equal!\nFirst value: %f\nSecond value: %f\n"
+					+ "Should not be equal within a range of %f\n", first, second, delta);
+			throw new AssertException(errorMessage);
+		}
+	}
+
+	/**
+	 * Asserts that two values are not equal. Throws an exception if they are equal.
+	 * If an AssertException is thrown the test has failed. The test or code should
+	 * be amended to that no AssertExceptions are thrown.
+	 *
+	 * Several overrides are given to compare different data types.
+	 *
+	 * This assertion relies on the equality method programmed into the objects.
+	 *
+	 * @param first The first value.
+	 * @param second The second value.
+	 * @throws AssertException Thrown if the first value matches the second value.
+	 */
+	public static void assertNotEquals(Object first, Object second) throws AssertException
+	{
+		if (first.equals(second) || second.equals(first))
+		{
+			String errorMessage = String.format("\n*******************************"
+					+ "\n*** Test Results: *************"
+					+ "\n*******************************\n"
+					+ "Should not be equal!\nFirst value: %s\nSecond value: %s\n",
+					first.toString(), second.toString());
 			throw new AssertException(errorMessage);
 		}
 	}

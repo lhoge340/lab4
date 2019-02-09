@@ -13,7 +13,7 @@ Tasks:
 6. Write test for Equipment.toString() for EquipmentTest.java
 7. Write test for Equipment getters for EquipmentTest.java
 8. Write test for Equipment equals for EquipmentTest.java ?
-9. Write test for Zoo getters for ZooTest.java
+9. Write test for getCapacity and getTotalHeight for ZooTest.java
 10. Write test for Zoo.toString() for ZooTest.java
 11. Write test for animal.equals() for AnimalTest.java ?
 
@@ -32,7 +32,7 @@ Estimated Time (minutes):
 
 Actual Time (minutes):
 1. 5
-2. 
+2. 5
 3. 
 4. 
 5. 
