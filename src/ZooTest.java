@@ -80,5 +80,53 @@ public class ZooTest {
 	/**
 	 * Test toString()
 	 */
+	public void toStringTest() throws AssertException
+	{
+		//Create an underfilled zoo to use toString() on
+		Zoo zooThree = new Zoo (3);
+		Animal platypus = new Animal("green", "Perry", 17.0, 7.0);
+		Animal giraffe = new Animal("yellow", "Jerry", 600.00, 150.00);
+		zooThree.addAnimal(platypus);
+		zooThree.addAnimal(giraffe);
+		
+		//Write the expected and actual strings
+		String expectedUnderfilled = "These animals live in the zoo: \n" + 
+				"Perry, a green-colored animal. 17.0 pounds, 7.0 inches\n" + 
+				"Jerry, a yellow-colored animal. 600.00 pounds, 150.00 inches";
+		String actualUnderfilled = zooThree.toString();
+		
+		//Compare
+		Assert.assertEquals(expectedUnderfilled, actualUnderfilled);
+		
+		//Add animal to fill array to capacity
+		Animal iguana = new Animal("blue", "Izzy", 30.0, 20.30);
+		zooThree.addAnimal(iguana);
+		
+		//Write the expected and actual strings
+				String expectedFilled = "These animals live in the zoo: \n" + 
+						"Perry, a green-colored animal. 17.0 pounds, 7.0 inches\n" + 
+						"Jerry, a yellow-colored animal. 600.00 pounds, 150.00 inches\n" +
+						"Izzy, a blue-colored animal. 30.0 pounds, 20.30 inches";
+				String actualFilled = zooThree.toString();
+				
+		//Compare
+		Assert.assertEquals(expectedFilled, actualFilled);
+		
+		//Add animal to fill array over capacity and utilize expandZoo()
+				Animal alpaca = new Animal("white", "Arnold", 350.47, 96.84);
+				zooThree.addAnimal(alpaca);
+				
+		//Write the expected and actual strings
+		String expectedOverfilled = "These animals live in the zoo: \n" + 
+						"Perry, a green-colored animal. 17.0 pounds, 7.0 inches\n" + 
+						"Jerry, a yellow-colored animal. 600.00 pounds, 150.00 inches\n" +
+						"Izzy, a blue-colored animal. 30.0 pounds, 20.30 inches\n" +
+						"Arnold, a white-colored animal. 350.47 pounds, 96.84 inches";
+		String actualOverfilled = zooThree.toString();
+		
+		//Compare
+		Assert.assertEquals(expectedOverfilled, actualOverfilled);
+		
+	}
 
 }

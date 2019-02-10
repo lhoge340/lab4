@@ -45,6 +45,7 @@ public class AnimalTest
     	//Create an object to use the toString() on
     	Animal platypus = new Animal("green", "Perry", 17.0, 7.0);
     	
+		//Write the expected and actual strings
     	String expected = "Perry, a green-colored animal. 17.0 pounds, 7.0 inches";
     	String actual = platypus.toString();
     	
