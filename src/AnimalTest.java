@@ -2,7 +2,7 @@
  * Testing class for Animal object
  *
  * @author Stephen Thung, references previous code from Dr.Fagg, Taner Davis
- * @version 2018-08-25
+ * @version 2019-02-09
  */
 public class AnimalTest
 {

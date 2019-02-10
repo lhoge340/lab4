@@ -3,7 +3,7 @@
  * Calculates statistics about these animals.
  * 
  * @author Stephen Thung
- * @version 2018-01-23
+ * @version 2019-02-09
  */
 public class Zoo
 {
