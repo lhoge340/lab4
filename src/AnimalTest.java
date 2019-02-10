@@ -33,7 +33,7 @@ public class AnimalTest
     	//The name should be "Perry", color "green", weight 17.0, and height 7.0.
     	Assert.assertEquals("green", platypus.getColor());
     	Assert.assertEquals("Perry", platypus.getName());
-    	Assert.assertEquals(20.4, platypus.getHeight(), 0.01);
+    	Assert.assertEquals(7.0, platypus.getHeight(), 0.01);
     	Assert.assertEquals(17.0, platypus.getWeight(), 0.01);
     }
     
@@ -46,7 +46,7 @@ public class AnimalTest
     	Animal platypus = new Animal("green", "Perry", 17.0, 7.0);
     	
 		//Write the expected and actual strings
-    	String expected = "Perry, a green-colored animal. 17.0 pounds, 7.0 inches";
+    	String expected = "Perry, a green-colored animal. 17.0 pounds, 7.0 inches\n";
     	String actual = platypus.toString();
     	
     	Assert.assertEquals(expected, actual);

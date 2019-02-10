@@ -58,7 +58,7 @@ public class ZooTest {
 		zooTwo.addAnimal(giraffe);
 		
 		//Compare to see if actual capacity matches expected capacity
-		Assert.assertEquals(2, zooTwo.getCapacity());
+		Assert.assertEquals(3, zooTwo.getCapacity());
 		
 		//Add animal to fill array to capacity
 		Animal iguana = new Animal("blue", "Izzy", 30.0, 20.30);
@@ -68,11 +68,11 @@ public class ZooTest {
 		Assert.assertEquals(3, zooTwo.getCapacity());
 		
 		//Add animal to fill array over capacity and utilize expandZoo()
-		Animal alpaca = new Animal("white", "Arnold", 350.47, 96.84);
+		Animal alpaca = new Animal("white", "Arnold", 350.4, 96.8);
 		zooTwo.addAnimal(alpaca);
 		
 		//Compare to see if actual capacity matches expected capacity
-		Assert.assertEquals(4, zooTwo.getCapacity());
+		Assert.assertEquals(6, zooTwo.getCapacity());
 		
 	}
 	
@@ -85,43 +85,43 @@ public class ZooTest {
 		//Create an underfilled zoo to use toString() on
 		Zoo zooThree = new Zoo (3);
 		Animal platypus = new Animal("green", "Perry", 17.0, 7.0);
-		Animal giraffe = new Animal("yellow", "Jerry", 600.00, 150.00);
+		Animal giraffe = new Animal("yellow", "Jerry", 600.0, 150.0);
 		zooThree.addAnimal(platypus);
 		zooThree.addAnimal(giraffe);
 		
 		//Write the expected and actual strings
 		String expectedUnderfilled = "These animals live in the zoo: \n" + 
 				"Perry, a green-colored animal. 17.0 pounds, 7.0 inches\n" + 
-				"Jerry, a yellow-colored animal. 600.00 pounds, 150.00 inches";
+				"Jerry, a yellow-colored animal. 600.0 pounds, 150.0 inches\n";
 		String actualUnderfilled = zooThree.toString();
 		
 		//Compare
 		Assert.assertEquals(expectedUnderfilled, actualUnderfilled);
 		
 		//Add animal to fill array to capacity
-		Animal iguana = new Animal("blue", "Izzy", 30.0, 20.30);
+		Animal iguana = new Animal("blue", "Izzy", 30.0, 20.3);
 		zooThree.addAnimal(iguana);
 		
 		//Write the expected and actual strings
 				String expectedFilled = "These animals live in the zoo: \n" + 
 						"Perry, a green-colored animal. 17.0 pounds, 7.0 inches\n" + 
-						"Jerry, a yellow-colored animal. 600.00 pounds, 150.00 inches\n" +
-						"Izzy, a blue-colored animal. 30.0 pounds, 20.30 inches";
+						"Jerry, a yellow-colored animal. 600.0 pounds, 150.0 inches\n" +
+						"Izzy, a blue-colored animal. 30.0 pounds, 20.3 inches\n";
 				String actualFilled = zooThree.toString();
 				
 		//Compare
 		Assert.assertEquals(expectedFilled, actualFilled);
 		
 		//Add animal to fill array over capacity and utilize expandZoo()
-				Animal alpaca = new Animal("white", "Arnold", 350.47, 96.84);
+				Animal alpaca = new Animal("white", "Arnold", 350.4, 96.8);
 				zooThree.addAnimal(alpaca);
 				
 		//Write the expected and actual strings
 		String expectedOverfilled = "These animals live in the zoo: \n" + 
 						"Perry, a green-colored animal. 17.0 pounds, 7.0 inches\n" + 
-						"Jerry, a yellow-colored animal. 600.00 pounds, 150.00 inches\n" +
-						"Izzy, a blue-colored animal. 30.0 pounds, 20.30 inches\n" +
-						"Arnold, a white-colored animal. 350.47 pounds, 96.84 inches";
+						"Jerry, a yellow-colored animal. 600.0 pounds, 150.0 inches\n" +
+						"Izzy, a blue-colored animal. 30.0 pounds, 20.3 inches\n" +
+						"Arnold, a white-colored animal. 350.4 pounds, 96.8 inches\n";
 		String actualOverfilled = zooThree.toString();
 		
 		//Compare

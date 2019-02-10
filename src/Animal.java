@@ -99,7 +99,7 @@ public class Animal
      * the animal in order of color, name, weight, and height
      *
      * @return The string representation of the Animal class, formatted as:
-     *         "(name), a (color)-colored animal. (weight) pounds, (height) inches.\n"
+     *         "(name), a (color)-colored animal. (weight) pounds, (height) inches\n"
      * Weight and height are formatted to one decimal place.
      */
     @Override
