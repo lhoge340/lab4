@@ -44,5 +44,48 @@ public class EquipmentTest {
 		Assert.assertEquals(expected, actual);
 	}
 	
+	/**
+	 * Test the Equipment equals method
+	 */
+	public void equalsTest() throws AssertException
+	{
+		/*
+		 * Test the if this == other branch
+		 */
+		
+		String strg = "knife/1,2.0,15.0,keep sharpened";
+		Equipment item = new Equipment(strg);
+		boolean expectedEqual = true;
+		boolean actualEqual = item.equals(item);
+		Assert.assertEquals(expectedEqual, actualEqual);		
+		
+		
+		/*
+		 * Test the if !(other instanceof Equipment)
+		 */
+		Animal giraffe = new Animal("yellow", "Jerry", 600.0, 150.0);
+		boolean expectedNonobject = false;
+		boolean actualNonobject = item.equals(giraffe);
+		Assert.assertEquals(expectedNonobject, actualNonobject);
+		
+		
+		/*
+		 * Test the matching of two objects that are the same
+		 */
+		Equipment itemSame = new Equipment(strg);
+		boolean expectedSame = true;
+		boolean actualSame = item.equals(itemSame);
+		Assert.assertEquals(expectedSame, actualSame);
+		
+		/*
+		 * Test if it'll match two objects that are not the same
+		 */
+		String strgDifferent = "knife/4,2.0,15.0,keep sharpened";
+		Equipment itemDifferent = new Equipment(strgDifferent);
+		boolean expectedDifferent = false;
+		boolean actualDifferent = item.equals(itemDifferent);
+		Assert.assertEquals(expectedDifferent, actualDifferent);
+	}
+	
 
 }
