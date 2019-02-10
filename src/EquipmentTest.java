@@ -52,7 +52,6 @@ public class EquipmentTest {
 		/*
 		 * Test the if this == other branch
 		 */
-		
 		String strg = "knife/1,2.0,15.0,keep sharpened";
 		Equipment item = new Equipment(strg);
 		boolean expectedEqual = true;

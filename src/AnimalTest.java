@@ -52,5 +52,46 @@ public class AnimalTest
     	Assert.assertEquals(expected, actual);
     }
     
+    /**
+     * Test the Animal equals method
+     */
+    public void equalsTest() throws AssertException
+    {
+    	/*
+		 * Test the if this == other branch
+		 */
+		Animal platypus = new Animal("green", "Perry", 17.0, 7.0);
+		boolean expectedEqual = true;
+		boolean actualEqual = platypus.equals(platypus);
+		Assert.assertEquals(expectedEqual, actualEqual);		
+		
+		
+		/*
+		 * Test the if !(other instanceof Animal)
+		 */
+		String strg = "knife/1,2.0,15.0,keep sharpened";
+		Equipment item = new Equipment(strg);
+		boolean expectedNonanimal = false;
+		boolean actualNonanimal = platypus.equals(item);
+		Assert.assertEquals(expectedNonanimal, actualNonanimal);
+		
+		
+		/*
+		 * Test the matching of two objects that are the same
+		 */
+		Animal animalSame = new Animal("green", "Perry", 17.0, 7.0);
+		boolean expectedSame = true;
+		boolean actualSame = platypus.equals(animalSame);
+		Assert.assertEquals(expectedSame, actualSame);
+		
+		/*
+		 * Test if it'll match two objects that are not the same
+		 */
+		Animal giraffe = new Animal("yellow", "Jerry", 600.0, 17.0);
+		boolean expectedDifferent = false;
+		boolean actualDifferent = platypus.equals(giraffe);
+		Assert.assertEquals(expectedDifferent, actualDifferent);
+    }
+    
 }
 
