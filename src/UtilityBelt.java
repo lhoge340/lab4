@@ -11,8 +11,8 @@ import java.util.ArrayList;
  * 
  * Reads in equipment information from files and outputs stats to other files.
  * 
- * @author Stephen
- * @version 2018-01-27
+ * @author Stephen, edited by Lynden Hoge
+ * @version 2019-02-10
  */
 public class UtilityBelt
 {

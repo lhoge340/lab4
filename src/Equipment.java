@@ -4,8 +4,8 @@
  * the number of copies of the item. I.e. there would be one equipment object for "batarangs", for
  * which the count variable would be equal to 5.
  *
- * @author Stephen
- * @version 2019-02-09
+ * @author Stephen, edited by Lynden Hoge
+ * @version 2019-02-10
  */
 public class Equipment
 {

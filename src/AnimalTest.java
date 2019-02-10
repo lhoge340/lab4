@@ -1,8 +1,8 @@
 /**
  * Testing class for Animal object
  *
- * @author Stephen Thung, references previous code from Dr.Fagg, Taner Davis
- * @version 2019-02-09
+ * @author Stephen Thung, references previous code from Dr.Fagg, Taner Davis, eidted by Lynden Hoge
+ * @version 2019-02-10
  */
 public class AnimalTest
 {

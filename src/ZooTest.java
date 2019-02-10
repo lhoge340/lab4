@@ -2,7 +2,7 @@
  * Testing class for Zoo class
  * 
  * @author Lyndee
- * @version 2019-02-09
+ * @version 2019-02-10
  */
 public class ZooTest {
 	

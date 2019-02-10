@@ -2,8 +2,8 @@
  * Class to represent a zoo. Holds a list of animals that are present at the zoo.
  * Calculates statistics about these animals.
  * 
- * @author Stephen Thung
- * @version 2019-02-09
+ * @author Stephen Thung, edited by Lynden Hoge
+ * @version 2019-02-10
  */
 public class Zoo
 {
